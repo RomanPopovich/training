@@ -489,8 +489,112 @@
 // Напишите функцию сортировки my(a,b), которая при вызове d4.sort(my) 
 // отсортирует элементы массива по убыванию чисел. Вызовите d4.sort(my)
 
-let d4 = [45,78,10,3];
-d4.sort(function my(a,b){
-        return b - a;
-});
-console.log(d4);
+// let d4 = [45,78,10,3];
+// d4.sort(function my(a,b){
+//         return b - a;
+// });
+// console.log(d4);
+
+
+
+
+// Задача 1
+// function buttonClick(){
+//       let elem = document.getElementById('elem');
+//       elem.outerHTML = 'Ку-ку! А'+'<b> я жирный!</b>';
+// };
+
+// Задача 2
+// function buttonClick(){
+//       let elem = document.getElementById('elem');
+//       elem.innerHTML = "Абзац преватился в h3";
+//       elem.outerHTML = '<b><h3>'+elem.innerHTML+'</h3></b>'
+// };
+
+// Задача 3
+// function func(){
+//       let elems = document.querySelectorAll('.a');
+//       for(let i = 0;i < elems.length; i++){
+//           elems[i].outerHTML = '<h3>'+ elems[i].innerHTML +'</h3>';
+//       };
+// };
+
+// задача 4
+// function buttonClick(){
+//       let a = +document.querySelector('.a').value;
+//       let b = +document.querySelector('.b').value;
+//       let result = a + b;
+//       document.querySelector('.result').innerHTML = result;
+      
+// }
+
+
+// задача 5
+
+// function func(){
+//       let elems = document.getElementsByTagName('p')
+//       for(let i = 0;i < elems.length; i++){
+//           elems[i].innerHTML = i+1
+//       };
+// };
+
+
+
+
+//Домашнее задание
+
+//Привяжите всем инпутам следующее событие - по потери фокуса каждый 
+//инпут выводит свое value в абзац с id="test"
+
+// var elems = document.querySelectorAll('input');
+// var parag = document.querySelector('#test');
+// for(let i = 0; i < elems.length; i++){
+//     elems[i].addEventListener('blur', func);
+// }
+// function func(){
+//     parag.innerHTML = this.value;
+// }
+
+// Для всех инпутов сделайте так, чтобы они выводили свой value алертом 
+//при нажатии на любой из них, но только по первому нажатию. Повторное 
+//нажатие на инпут не должно вызывать реакции.
+
+// var elems = document.querySelectorAll('input');
+// for(let i = 0; i < elems.length; i++){
+//     elems[i].addEventListener('click',func)
+// }
+// function func(){
+//          alert(this.value);
+//          this.removeEventListener('click', func);
+// }
+
+// Даны абзацы с числами. По нажатию на абзац в нем должен появится 
+//квадрат числа, которое он содержит.
+
+// var elems = document.querySelectorAll('p');
+// for(let i = 0; i < elems.length; i++){
+//     elems[i].addEventListener('click',func)
+// }
+// function func(){
+//          this.innerHTML = this.innerHTML * this.innerHTML;
+// }
+
+// Даны инпуты. Сделайте так, чтобы все инпуты по потери фокуса проверяли 
+//свое содержимое на правильное количество символов. Сколько символов 
+//должно быть в инпуте, указывается в атрибуте data-length. Если вбито 
+//правильное количество, то граница инпута становится зеленой, если 
+//неправильное - красной.
+
+// var elems = document.getElementsByTagName('input');
+// for(let i = 0; i < elems.length; i++){
+//     elems[i].addEventListener('blur', func);
+// }
+// function func(){
+//     var correctLength = this.dataset.length;
+// 	var inputDataLength = this.value.length;
+// 	if(correctLength == inputDataLength){
+// 		this.style.borderColor = 'green';
+// 	} else {
+// 		this.style.borderColor = 'red';
+// 	}
+// }
